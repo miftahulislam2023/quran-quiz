@@ -80,13 +80,15 @@ export default function Quiz() {
             </div>
 
             {/* Word count and remaining display */}
-            <div className="flex justify-between mb-4 text-sm text-gray-600">
-                <span>Word {wordCount + 1} of {quranicWords.length}</span>
-                <span>{remainingCount - 1} words remaining</span>
-            </div>
 
             {currentWord ? (
+
+
                 <div className="relative perspective-1000">
+                    <div className="flex justify-between mb-4 text-sm text-gray-600">
+                        <span>Word {wordCount + 1} of {quranicWords.length}</span>
+                        <span>{remainingCount - 1} words remaining</span>
+                    </div>
                     {/* Flashcard with flip animation */}
                     <div
                         className={`relative transition-all duration-500 transform-style-3d cursor-pointer ${isFlipped ? 'rotate-y-180' : ''}`}
